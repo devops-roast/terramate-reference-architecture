@@ -1,0 +1,3 @@
+globals {
+  terraform_version = ">= 1.10, < 2.0"
+}

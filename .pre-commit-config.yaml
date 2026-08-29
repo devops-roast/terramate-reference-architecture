@@ -1,0 +1,16 @@
+exclude: '(^|/)(\.terraform/|.*_terramate_generated_.*\.tf$)'
+
+repos:
+  - repo: local
+    hooks:
+      - id: terramate-fmt
+        name: format terramate files
+        language: system
+        entry: terramate fmt
+        files: '(^|/).*\.tm\.hcl$'
+
+      - id: terraform-fmt
+        name: format terraform files
+        language: system
+        entry: terraform fmt
+        files: '(^|/).*\.(tf|tfvars)$'
